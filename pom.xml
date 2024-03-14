@@ -77,7 +77,6 @@
 			<plugin>
             			<groupId>org.eclipse.jetty</groupId>
             			<artifactId>jetty-maven-plugin</artifactId>
-            			<version>11.0.20</version>
             			<configuration>
                 			<httpConnector>
                     				<port>8089</port> <!-- Puerto deseado -->
