@@ -87,5 +87,10 @@
 	</build>
 
 	
+<profiles>
+    <profile>
+        <id>testing</id>
+    </profile>
+</profiles>
 
 </project>
