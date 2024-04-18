@@ -78,9 +78,19 @@
             			<groupId>org.eclipse.jetty</groupId>
             			<artifactId>jetty-maven-plugin</artifactId>
 				<version>11.0.9</version>
+				<executions>
+                    			<execution>
+			                        <id>stop-jetty</id>
+			                        <phase>post-integration-test</phase>
+			                        <goals>
+			                            <goal>stop</goal>
+			                        </goals>
+			                    </execution>
+                		</executions>
             			<configuration>
                     			<stopKey>stopKey</stopKey>
                 			<stopWait>20</stopWait>
+					<stopPort>8089</stopPort>
                 			<httpConnector>
                     				<port>8089</port> <!-- Puerto deseado -->
                 			</httpConnector>
