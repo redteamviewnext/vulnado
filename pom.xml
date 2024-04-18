@@ -79,6 +79,10 @@
             			<artifactId>jetty-maven-plugin</artifactId>
 				<version>11.0.9</version>
             			<configuration>
+					<webApp>
+                        		<contextPath>/</contextPath> <!-- El contexto raíz de tu aplicación web -->
+                    			</webApp>
+                    			<stopKey>STOP</stopKey>
                 			<httpConnector>
                     				<port>8089</port> <!-- Puerto deseado -->
                 			</httpConnector>
