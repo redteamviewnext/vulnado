@@ -91,9 +91,9 @@
             			<configuration>
                     			<stopKey>stopKey</stopKey>
                 			<stopWait>20</stopWait>
-					<stopPort>8089</stopPort>
+					<stopPort>8094</stopPort>
                 			<httpConnector>
-                    				<port>8089</port> <!-- Puerto deseado -->
+                    				<port>8094</port> <!-- Puerto deseado -->
                 			</httpConnector>
             			</configuration>
         		</plugin>
