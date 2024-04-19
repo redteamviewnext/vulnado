@@ -16,7 +16,7 @@ services:
       - "db"
       
 networks:
-  sonarnet:
+  jenkins_sonarnet:
     driver: bridge
 
   client:
