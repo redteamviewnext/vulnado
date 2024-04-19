@@ -7,6 +7,8 @@ services:
     links:
       - db
       - internal_site
+    networks:
+      - jenkins_sonarnet
     environment:
       - PGPASSWORD=vulnado
       - PGDATABASE=vulnado
@@ -14,10 +16,6 @@ services:
       - PGUSER=postgres
     depends_on:
       - "db"
-      
-networks:
-  jenkins_sonarnet:
-    driver: bridge
 
   client:
     build: client
@@ -29,6 +27,12 @@ networks:
     environment:
       - POSTGRES_PASSWORD=vulnado
       - POSTGRES_DB=vulnado
+    networks:
+      - jenkins_sonarnet
 
   internal_site:
     build: internal_site
+
+networks:
+  jenkins_sonarnet:
+    driver: bridge
