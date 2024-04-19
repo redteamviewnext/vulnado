@@ -3,7 +3,7 @@ services:
   vulnado:
     build: .
     ports:
-      - 8080:8080
+      - 8092:8080
     links:
       - db
       - internal_site
@@ -14,6 +14,8 @@ services:
       - PGUSER=postgres
     depends_on:
       - "db"
+    networks:
+      - jenkins_sonarnet
 
   client:
     build: client
