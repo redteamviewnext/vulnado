@@ -14,8 +14,10 @@ services:
       - PGUSER=postgres
     depends_on:
       - "db"
-    networks:
-      - jenkins_sonarnet
+      
+networks:
+  sonarnet:
+    driver: bridge
 
   client:
     build: client
