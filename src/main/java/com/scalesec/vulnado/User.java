@@ -1,6 +1,7 @@
 package com.scalesec.vulnado;
 
 import java.sql.Connection;
+import java.sql.Statement;
 import java.sql.ResultSet;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.JwtParser;
@@ -34,7 +35,6 @@ public class User {
       throw new Unauthorized(e.getMessage());
     }
   }
-
   public static User fetch(String un) {
     Statement stmt = null;
     User user = null;
